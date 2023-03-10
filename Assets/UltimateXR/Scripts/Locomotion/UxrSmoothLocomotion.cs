@@ -25,6 +25,8 @@ namespace UltimateXR.Locomotion
         [SerializeField]                                private float            _rotationDegreesPerSecondSprint = 120.0f;
         [SerializeField]                                private float            _gravity                        = -9.81f;
 
+        [SerializeField] private UxrHandSide _rotationInputHand = UxrHandSide.Left;
+
         [Header("Input parameters")] [SerializeField] private UxrHandSide     _sprintButtonHand = UxrHandSide.Left;
         [SerializeField]                              private UxrInputButtons _sprintButton     = UxrInputButtons.Joystick;
 
@@ -144,6 +146,13 @@ namespace UltimateXR.Locomotion
                     // Single controller with 2 joysticks (gamepad?)
                     joystickLeft  = Avatar.ControllerInput.GetInput2D(UxrHandSide.Left, UxrInput2D.Joystick);
                     joystickRight = Avatar.ControllerInput.GetInput2D(UxrHandSide.Left, UxrInput2D.Joystick2);
+                }
+
+                if(_rotationInputHand == UxrHandSide.Left)
+                {
+                    var tempRight = joystickRight;
+                    joystickRight = joystickLeft;
+                    joystickLeft = tempRight;
                 }
 
                 Vector3 offset = Vector3.zero;
