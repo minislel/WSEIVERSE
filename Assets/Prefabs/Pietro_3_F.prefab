@@ -1478,6 +1478,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8791525277775022866}
     m_Modifications:
+    - target: {fileID: 3135874984872890089, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_text
+      value: DUBLIN
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403966458815486695, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_text
+      value: DUBLIN
+      objectReference: {fileID: 0}
     - target: {fileID: 7287718693370246335, guid: 9d181db4d5269904e860e5c2004d107e,
         type: 3}
       propertyPath: m_RootOrder
@@ -5798,6 +5808,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8791525277775022866}
     m_Modifications:
+    - target: {fileID: 3135874984872890089, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_text
+      value: SAMORZAD STUDENTOW
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135874984872890089, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 1.1318285
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403966458815486695, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_text
+      value: SAMORZAD STUDENTOW
+      objectReference: {fileID: 0}
     - target: {fileID: 7287718693370246335, guid: 9d181db4d5269904e860e5c2004d107e,
         type: 3}
       propertyPath: m_RootOrder
@@ -7688,6 +7713,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8791525277775022866}
     m_Modifications:
+    - target: {fileID: 3135874984872890089, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_text
+      value: CHUJ WI CO
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403966458815486695, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_text
+      value: CHUJ WI CO
+      objectReference: {fileID: 0}
     - target: {fileID: 7287718693370246335, guid: 9d181db4d5269904e860e5c2004d107e,
         type: 3}
       propertyPath: m_RootOrder
@@ -8483,6 +8518,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8791525277775022866}
     m_Modifications:
+    - target: {fileID: 3135874984872890089, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_text
+      value: "STUDIUM JEZYK\xD3W OPCYCH"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135874984872890089, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135874984872890089, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 0.42835712
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135874984872890089, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 3.3209867
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135874984872890089, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 0.32798767
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135874984872890089, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403966458815486695, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_text
+      value: "Studium J\u0119zyk\xF3w Obcych"
+      objectReference: {fileID: 0}
     - target: {fileID: 7287718693370246335, guid: 9d181db4d5269904e860e5c2004d107e,
         type: 3}
       propertyPath: m_RootOrder
@@ -8552,6 +8622,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104177972036089179, guid: 9d181db4d5269904e860e5c2004d107e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8961776589049840340, guid: 9d181db4d5269904e860e5c2004d107e,
         type: 3}
