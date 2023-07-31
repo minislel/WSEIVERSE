@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 147
+  controlID: 17
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 148
+  controlID: 18
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 20
+  controlID: 78
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 21
+  controlID: 79
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -372,22 +372,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Milena - stocki
+    - Assets/Materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Milena - stocki
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\danio\WSEIVERSE
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ccd70400
-    m_LastClickedID: 317388
-    m_ExpandedIDs: 000000006ed70400ccd70400ced7040000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 60}
+    m_SelectedIDs: 84d90400
+    m_LastClickedID: 317828
+    m_ExpandedIDs: 0000000002d90400c4d9040000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -415,7 +415,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006ed70400
+    m_ExpandedIDs: 0000000002d90400
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -547,7 +547,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 62a6edffcea8edff9ec6efff68f3f1ff80f3f1ffa409f2ff6625f2ffa475f3ff6076f3ff6476f3ff1ac6f3ff38d4f3ffc0d6f3ff74d8f3ffd0d8f3ffd8d8f3ff52e4f3ff7ee7f3ffdceaf3ff06ecf5ff5ce6f7ff4038f8ff7a51f8ff8251f8ffb232faffc411fcff4af8fdff00fbffff
+      m_ExpandedIDs: bc38feffc038feffd438feff9c39feff80a1feffcc85ffffa6f7ffff00fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -797,9 +797,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.435593, y: -1.6730927, z: -10.637959}
+    m_Target: {x: 9.52342, y: -2.110886, z: -16.580292}
     speed: 2
-    m_Value: {x: 4.435593, y: -1.6730927, z: -10.637959}
+    m_Value: {x: 9.52342, y: -2.110886, z: -16.580292}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -846,13 +846,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.12302635, y: 0.03682008, z: -0.0024371226, w: 0.99199426}
+    m_Target: {x: -0.014877148, y: 0.112021, z: -0.0047467174, w: -0.99387574}
     speed: 2
-    m_Value: {x: 0.122996055, y: 0.035322335, z: -0.0022519613, w: 0.99177575}
+    m_Value: {x: -0.01339612, y: 0.10901411, z: -0.004536994, w: -0.9939396}
   m_Size:
-    m_Target: 0.74668777
+    m_Target: 0.7724202
     speed: 2
-    m_Value: 0.71453375
+    m_Value: 0.7724202
   m_Ortho:
     m_Target: 0
     speed: 2
