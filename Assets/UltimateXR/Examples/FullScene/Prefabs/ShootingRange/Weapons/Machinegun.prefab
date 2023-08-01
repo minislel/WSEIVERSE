@@ -415,16 +415,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f5a30897a3c024c805c866226dd743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manipulationMode: 0
   _controlParentDirection: 1
   _ignoreGrabbableParentDependency: 0
   _priority: 0
+  _allowMultiGrab: 1
+  _translationConstraintMode: 0
+  _restrictToBox: {fileID: 0}
+  _restrictToSphere: {fileID: 0}
+  _translationLimitsMin: {x: 0, y: 0, z: 0}
+  _translationLimitsMax: {x: 0, y: 0, z: 0}
+  _rotationConstraintMode: 0
+  _rotationAngleLimitsMin: {x: 0, y: 0, z: 0}
+  _rotationAngleLimitsMax: {x: 0, y: 0, z: 0}
+  _autoRotationProvider: 1
+  _rotationProvider: 0
+  _rotationLongitudinalAxis:
+    _axis: 2
+  _needsTwoHandsToRotate: 1
+  _lockedGrabReleaseDistance: 0.4
+  _translationResistance: 0.03
+  _rotationResistance: 0.05
   _rigidBodySource: {fileID: 244220739104333787}
   _rigidBodyDynamicOnRelease: 1
   _verticalReleaseMultiplier: 1
   _horizontalReleaseMultiplier: 1
-  _needsTwoHandsToRotate: 1
-  _allowMultiGrab: 1
   _previewGrabPosesMode: 3
   _previewPosesRegenerationType: 0
   _previewPosesRegenerationIndex: -1
@@ -528,21 +542,6 @@ MonoBehaviour:
   _dropSnapMode: 3
   _dropProximityTransformUseSelf: 1
   _dropProximityTransform: {fileID: 0}
-  _translationConstraintMode: 0
-  _restrictToBox: {fileID: 0}
-  _restrictToSphere: {fileID: 0}
-  _translationLimitsMin: {x: 0, y: 0, z: 0}
-  _translationLimitsMax: {x: 0, y: 0, z: 0}
-  _translationLimitsReferenceIsParent: 1
-  _translationLimitsParent: {fileID: 0}
-  _rotationConstraintMode: 0
-  _rotationAngleLimitsMin: {x: 0, y: 0, z: 0}
-  _rotationAngleLimitsMax: {x: 0, y: 0, z: 0}
-  _rotationLimitsReferenceIsParent: 1
-  _rotationLimitsParent: {fileID: 0}
-  _lockedGrabReleaseDistance: 0.4
-  _translationResistance: 0.03
-  _rotationResistance: 0.05
 --- !u!114 &2252505135500819345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +575,37 @@ MonoBehaviour:
     _triggerGrabbable: {fileID: 2256224664428340293}
     _grabbableGrabPointIndex: 0
     _triggerTransform: {fileID: 5361738144012958466}
-    _triggerRotationOffset: {x: 40, y: 0, z: 0}
+    _triggerRotationAxis:
+      _axis: 0
+    _triggerRotationDegrees: 40
+    _ammunitionMagAnchor: {fileID: 6047250364362683561}
+    _recoilAngleOneHand: 4
+    _recoilAngleTwoHands: 0.3
+    _recoilOffsetOneHand: {x: -0, y: -0, z: -0.03}
+    _recoilOffsetTwoHands: {x: -0, y: -0, z: -0.01}
+    _recoilDurationSeconds: 0.2
+  - _projectileShotIndex: 0
+    _cycleType: 2
+    _maxShotFrequency: 10
+    _shotAudio:
+      _clip: {fileID: 8300000, guid: b911de1144c2fe54eb90315943b52d40, type: 3}
+      _volume: 1
+    _shotAudioNoAmmo:
+      _clip: {fileID: 8300000, guid: fe726d3155153a34b8f4aca59c732479, type: 3}
+      _volume: 0.3
+    _shotHapticClip:
+      _clip: {fileID: 0}
+      _clipAmplitude: 1
+      _hapticMode: 1
+      _fallbackClipType: 6
+      _fallbackAmplitude: 1
+      _fallbackDurationSeconds: -1
+    _triggerGrabbable: {fileID: 2256224664428340293}
+    _grabbableGrabPointIndex: 0
+    _triggerTransform: {fileID: 5361738144012958466}
+    _triggerRotationAxis:
+      _axis: 0
+    _triggerRotationDegrees: 40
     _ammunitionMagAnchor: {fileID: 6047250364362683561}
     _recoilAngleOneHand: 4
     _recoilAngleTwoHands: 0.3

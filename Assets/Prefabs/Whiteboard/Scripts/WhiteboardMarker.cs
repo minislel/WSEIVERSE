@@ -8,10 +8,11 @@ public class WhiteboardMarker : MonoBehaviour
     [SerializeField] private Transform _tip;
     [SerializeField] private int _penSize = 5;
 
+
     private Renderer _renderer;
     private Color[] _colors;
-    private float _tipHeight;
-
+    [SerializeField] private float _tipHeight = 1;
+    [SerializeField] private plugableObject plugableObject;
     private RaycastHit _touch;
     private Whiteboard _whiteboard;
     private Vector2 _touchPos, _lastTouchPos;
@@ -22,12 +23,13 @@ public class WhiteboardMarker : MonoBehaviour
     {
         _renderer = _tip.GetComponent<Renderer>();
         _colors = Enumerable.Repeat(_renderer.material.color, _penSize * _penSize).ToArray();
-        _tipHeight = _tip.localScale.y;
+        //_tipHeight = _tip.localScale.y;
     }
 
     void Update()
     {
-        Draw();
+        if(plugableObject is not null && !plugableObject.HasAttached(0))
+            Draw();
     }
 
     private void Draw()
@@ -52,7 +54,7 @@ public class WhiteboardMarker : MonoBehaviour
                 {
                     _whiteboard.texture.SetPixels(x, y, _penSize, _penSize, _colors);
 
-                    for(float f = 0.01f; f < 1.00f; f+=0.03f)
+                    for(float f = 0.01f; f < 1.00f; f+=0.01f)
                     {
                         var lerpX = (int)Mathf.Lerp(_lastTouchPos.x, x, f);
                         var lerpY = (int)Mathf.Lerp(_lastTouchPos.y, y, f);
