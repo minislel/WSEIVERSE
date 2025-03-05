@@ -49,8 +49,4 @@ workflows:
     artifacts:
       - build/*.apk  # Ścieżka do pliku APK
 
-    publishing:
-      email:
-        recipients:
-          - "twoj-email@example.com"
-        notify: SUCCESS, FAILURE
+
