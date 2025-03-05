@@ -41,8 +41,4 @@ workflows:
     artifacts:
       - build/*.apk # Upewnij się, że ścieżka zgadza się z Twoim projektem
 
-    publishing:
-      email:
-        recipients:
-          - "marcin4kt@gmail.com"
-        notify: SUCCESS, FAILURE
+
