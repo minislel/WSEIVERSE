@@ -1,16 +1,14 @@
 workflows:
   unity-android-build:
     name: Unity Android Build
-    max_build_duration: 120 # Maksymalny czas budowania w minutach
-    instance_type: mac_mini_m1 # Można zmienić na Linux jeśli Unity wersja to obsługuje
+    max_build_duration: 120  # Limit czasu kompilacji (minuty)
+    instance_type: mac_mini_m1  # Apple Mac Mini M1
 
     environment:
       vars:
-        UNITY_VERSION: 2021.3.11f1 # Dostosuj do wersji Unity Twojego projektu
-        ANDROID_API_LEVEL: 30
-        ANDROID_BUILD_TOOLS_VERSION: "30.0.3"
+        UNITY_VERSION: 2021.3.11f1  # Upewnij się, że to właściwa wersja Unity
       groups:
-        - unity_credentials # Klucz licencyjny Unity, który dodamy później
+        - unity_credentials  # Klucz licencyjny Unity (dodamy w Codemagic)
 
     triggering:
       events:
@@ -22,23 +20,37 @@ workflows:
           source: true
 
     scripts:
+      - name: Install dependencies
+        script: |
+          brew update
+          brew install wget unzip
+
       - name: Install Unity
         script: |
-          curl -s https://get.unity3d.com/unity-hub/install.sh | bash
-          unity-hub install --version $UNITY_VERSION --module android
+          UNITY_DOWNLOAD_URL="https://download.unity3d.com/download_unity/2e8f6c65e5c9/MacEditorInstaller/Unity.pkg"
+          wget -q $UNITY_DOWNLOAD_URL -O Unity.pkg
+          sudo installer -pkg Unity.pkg -target /
+          rm Unity.pkg
 
       - name: Activate Unity License
         script: |
-          unity-editor -quit -batchmode -nographics -logFile -serial $UNITY_SERIAL -username $UNITY_EMAIL -password $UNITY_PASSWORD
+          /Applications/Unity/Hub/Editor/$UNITY_VERSION/Unity.app/Contents/MacOS/Unity \
+            -quit -batchmode -nographics \
+            -serial $UNITY_SERIAL -username $UNITY_EMAIL -password $UNITY_PASSWORD
 
       - name: Build APK
         script: |
-          unity-editor -quit -batchmode -nographics -projectPath . \
-          -executeMethod BuildScript.PerformBuild \
-          -buildTarget Android \
-          -logFile unity_build.log
+          /Applications/Unity/Hub/Editor/$UNITY_VERSION/Unity.app/Contents/MacOS/Unity \
+            -quit -batchmode -nographics -projectPath . \
+            -executeMethod BuildScript.PerformBuild \
+            -buildTarget Android \
+            -logFile unity_build.log
 
     artifacts:
-      - build/*.apk # Upewnij się, że ścieżka zgadza się z Twoim projektem
+      - build/*.apk  # Ścieżka do pliku APK
 
-
+    publishing:
+      email:
+        recipients:
+          - "twoj-email@example.com"
+        notify: SUCCESS, FAILURE
