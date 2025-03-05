@@ -1,0 +1,48 @@
+workflows:
+  unity-android-build:
+    name: Unity Android Build
+    max_build_duration: 120 # Maksymalny czas budowania w minutach
+    instance_type: mac_mini_m1 # Można zmienić na Linux jeśli Unity wersja to obsługuje
+
+    environment:
+      vars:
+        UNITY_VERSION: 2021.3.11f1 # Dostosuj do wersji Unity Twojego projektu
+        ANDROID_API_LEVEL: 30
+        ANDROID_BUILD_TOOLS_VERSION: "30.0.3"
+      groups:
+        - unity_credentials # Klucz licencyjny Unity, który dodamy później
+
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch_patterns:
+        - pattern: "main"
+          include: true
+          source: true
+
+    scripts:
+      - name: Install Unity
+        script: |
+          curl -s https://get.unity3d.com/unity-hub/install.sh | bash
+          unity-hub install --version $UNITY_VERSION --module android
+
+      - name: Activate Unity License
+        script: |
+          unity-editor -quit -batchmode -nographics -logFile -serial $UNITY_SERIAL -username $UNITY_EMAIL -password $UNITY_PASSWORD
+
+      - name: Build APK
+        script: |
+          unity-editor -quit -batchmode -nographics -projectPath . \
+          -executeMethod BuildScript.PerformBuild \
+          -buildTarget Android \
+          -logFile unity_build.log
+
+    artifacts:
+      - build/*.apk # Upewnij się, że ścieżka zgadza się z Twoim projektem
+
+    publishing:
+      email:
+        recipients:
+          - "marcin4kt@gmail.com"
+        notify: SUCCESS, FAILURE
