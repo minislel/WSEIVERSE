@@ -2,7 +2,7 @@ workflows:
   unity-android-build:
     name: Unity Android Build
     max_build_duration: 120 # Maksymalny czas budowania w minutach
-    instance_type: mac_mini # Można zmienić na Linux jeśli Unity wersja to obsługuje
+    instance_type: mac_mini_m1 # Można zmienić na Linux jeśli Unity wersja to obsługuje
 
     environment:
       vars:
